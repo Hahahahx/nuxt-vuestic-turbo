@@ -2,16 +2,32 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
+    "dev:t": "turbo run dev --parallel  --filter=nuxt3",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "prepare": "husky install",
+    "start": "turbo run start --parallel",
+    "start:apps": "turbo run start --parallel --filter='./apps/*'"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "typescript": "^4.9.5",
+    "nuxt": "^3.4.1",
+    "eslint": "^8.28.0",
+    "tsconfig": "workspace:*",
     "eslint-config-custom": "workspace:*",
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
   "packageManager": "pnpm@7.15.0",
-  "name": "test"
+  "name": "test",
+  "dependencies": {
+    "vue": "^3.2.47"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,md,mdx}": [
+      "eslint --fix --ext *.{js,jsx,ts,tsx,json,md,mdx} ./",
+      "eslint",
+      "git add"
+    ]
+  }
 }
