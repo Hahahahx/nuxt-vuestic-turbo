@@ -1,12 +1,16 @@
 import { colors } from './themes'
 
 export default defineNuxtConfig({
+  ssr: false, // generate page
   modules: [
+    '@vue-macros/nuxt',
     '@vueuse/nuxt',
     '@unocss/nuxt',
     '@nuxtjs/i18n',
     '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt',
     '@vuestic/nuxt',
+    '@nuxt/content',
     '@nuxt/devtools',
   ],
   css: ['@unocss/reset/tailwind.css'],
@@ -20,6 +24,30 @@ export default defineNuxtConfig({
       components: {
         VaButton: {
         },
+      },
+    },
+  },
+  content: {
+    // sources:{
+    //   driver:'fs',
+    //   base:
+    // }
+    highlight: {
+      // Theme used in all color schemes.
+
+      preload: [
+        'json',
+        'shell',
+        'yaml',
+      ],
+      // OR
+      theme: {
+        // Default theme (same as single string)
+        default: 'github-light',
+        // Theme used if `html.dark`
+        dark: 'github-dark',
+        // Theme used if `html.sepia`
+        sepia: 'monokai',
       },
     },
   },

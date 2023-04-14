@@ -1,6 +1,5 @@
 {
   "name": "nuxt3",
-  "private": true,
   "scripts": {
     "postinstall": "nuxi prepare",
     "build": "nuxi build",
@@ -9,29 +8,32 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "ui": "workspace:*",
-    "tsconfig": "workspace:*",
-    "pinia-store": "workspace:*",
     "@iconify-json/carbon": "^1.1.16",
+    "@nuxt/content": "^2.5.2",
     "@nuxt/devtools": "^0.4.0",
     "@nuxtjs/i18n": "8.0.0-beta.11",
+    "@pinia-plugin-persistedstate/nuxt": "^1.1.1",
     "@pinia/nuxt": "^0.4.8",
     "@unocss/core": "^0.51.4",
     "@unocss/nuxt": "^0.51.4",
     "@unocss/reset": "^0.51.4",
+    "@vue-macros/nuxt": "^1.2.8",
     "@vuestic/nuxt": "^1.0.13",
     "@vueuse/nuxt": "^9.13.0",
     "consola": "3.0.1",
     "nuxt": "^3.3.1",
     "postcss-nested": "^6.0.1",
     "typescript": "^5.0.4",
+    "unocss": "^0.51.4",
+    "tsconfig": "workspace:*",
+    "pinia-store": "workspace:*",
     "unocss-preset-extra": "^0.5.2",
-    "unocss-preset-theme": "^0.6.0",
-    "unocss": "^0.51.4"
+    "unocss-preset-theme": "^0.6.0"
   },
   "dependencies": {
     "pinia": "^2.0.34",
     "vee-validate": "^4.8.4",
+    "vue-error-boundary": "^2.0.1",
     "yup": "^1.1.0"
   }
 }

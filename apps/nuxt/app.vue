@@ -5,6 +5,8 @@ const {
 const availableLocales = computed(() => {
   return (locales.value).filter((i) => i.code !== locale.value)
 })
+
+console.log(locale.value, locales.value, availableLocales.value[0])
 </script>
 
 <template>
@@ -20,12 +22,14 @@ const availableLocales = computed(() => {
       {{ $t('account.bot') }}
     </button>
 
-    <a
+    <VaButton
       v-for="locale in availableLocales"
       :key="locale.code"
       href="#"
       @click.prevent.stop="setLocale(locale.code)"
-    >{{ locale.name }}</a>
+    >
+      {{ locale.code }}
+    </VaButton>
   </main>
 </template>
 
