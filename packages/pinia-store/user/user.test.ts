@@ -1,5 +1,9 @@
-import { beforeEach, describe, expect, it, test } from 'vitest'
-import { createPinia, setActivePinia } from 'pinia'
+import {
+  beforeEach, describe, expect, it, test,
+} from 'vitest'
+import {
+  createPinia, setActivePinia,
+} from 'pinia'
 import { useUserStore } from './user'
 
 describe('User Store with describe', () => {
