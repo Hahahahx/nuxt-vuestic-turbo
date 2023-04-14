@@ -17,7 +17,10 @@ module.exports = ({
       files: [
         '*.mdx', '*.md',
       ],
-      rules: { '@typescript-eslint/indent': 'off' },
+      rules: {
+        '@typescript-eslint/indent': 'off',
+        'indent': 'off',
+      },
       extends: 'plugin:mdx/recommended',
       parserOptions: { ecmaVersion: 'latest' },
     },

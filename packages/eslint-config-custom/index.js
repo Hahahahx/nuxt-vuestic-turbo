@@ -75,6 +75,7 @@ module.exports = ({
   ignorePatterns: [
     '**/*.json',
     'dist',
+    'cache',
     'node_modules',
     '.turbo',
     '.nuxt',
