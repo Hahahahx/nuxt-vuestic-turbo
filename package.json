@@ -19,16 +19,16 @@
     "eslint-config-custom": "link:packages/eslint-config-custom",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
-    "nuxt": "^3.4.1",
-    "prettier": "^2.5.1",
-    "turbo": "latest",
+    "prettier": "2.8.4",
+    "turbo": "1.8.3",
+    "execa": "7.0.0",
+    "prompts": "2.4.2",
+    "tsx": "3.12.3",
+    "semver": "7.3.8",
     "typescript": "^4.9.5"
   },
   "packageManager": "pnpm@7.15.0",
   "name": "test",
-  "dependencies": {
-    "vue": "^3.2.47"
-  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,md,mdx}": [
       "eslint --fix --ext *.{js,jsx,ts,tsx,json,md,mdx} ./",
